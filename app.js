@@ -5,10 +5,13 @@ const methodOverride = require("method-override");
 const port = 8080;
 const path = require("path");
 const app = express();
+const ejsMate=require("ejs-mate");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+app.engine('ejs', ejsMate);
+app.use(express.static(path.join(__dirname,"/public")))
 main()
   .then(() => {
     console.log("connected to db");
