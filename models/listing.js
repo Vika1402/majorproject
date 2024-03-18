@@ -9,11 +9,7 @@ const listeningSchema = new Schema({
   description: String,
   image: {
     type: String, 
-    default: "https://housing.com/news/wp-content/uploads/2023/03/Cool-home-exterior-designs-in-2023-f-686x400.jpg",
-    set: (v) =>
-      v === ""
-        ? "https://housing.com/news/wp-content/uploads/2023/03/Cool-home-exterior-designs-in-2023-f-686x400.jpg"
-        : v,
+    
   },
   price: Number,
   location: String,
