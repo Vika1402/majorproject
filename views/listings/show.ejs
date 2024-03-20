@@ -14,9 +14,10 @@
       <li class="list-group-item"><%= listing.country %></li>
     </ul>
     <div class="card-btn col-8 offset-3">
-      <a class="fcc-btn" href="/listing/<%= listing._id %>/edit"
-        ><button type="button" class="btn btn-primary">Edit</button></a
-      >
+      <a class="fcc-btn" href="/listings/<%= listing._id %>/edit">
+        <button type="button" class="btn btn-primary">Edit</button>
+      </a>
+      
       <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
