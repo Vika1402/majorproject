@@ -1,17 +1,55 @@
 
 <% layout("/layouts/boilerplate") %>
 <body>
-  <h3>Edit listings </h3>
-  <form action="/listings/<%= listing._id %>?_method=PUT" method="post">
+  <div class="row">
+    <div class="col-8 offset-2">
 
-<input type="text" placeholder="Enter Title" value="<%= listing.title  %>"><br><br>
-<textarea name="listing[description]"   cols="30" rows="10"  ><%= listing.description %></textarea><br><br><br>
-<input type="number" name="listing[price]" value="<%= listing.price %>" >
-<input type="text" name="listing[image]" value="<%= listing.image %>"><br><br>
-<input type="text" value="<%= listing.location %>" name="listing[location]"><br><br>
-<input type="text" value="<%= listing.country %>" name="listing[country]"><br><br>
-<button type="submit">Edit Now</button>
-  </form>
+      <h3>Edit listings </h3>
+      <form action="/listings/<%= listing._id %>?_method=PUT" method="post"  novalidate
+        class="needs-validation">
+        <div class="mb-3">
+          <label for="title" class="form-label">title</label>
+          <input required  class="form-control" type="text" placeholder="Enter Title" value="<%= listing.title  %>">
+        </div>
+    
+    
+
+
+        <div class="mb-3">
+          <label for="title" class="form-label">Description</label>
+          <textarea required   class="form-control" name="listing[description]"    ><%= listing.description %></textarea>
+
+        </div>
+
+        <div class="mb-3">
+          <label for="title" class="form-label">Price</label>
+          <input required   class="form-control" type="number" name="listing[price]" value="<%= listing.price %>" >
+
+        </div>
+
+        <div class="mb-3">
+          <label for="title" class="form-label">Image Link</label>
+          <input   class="form-control" type="text" name="listing[image]" value="<%= listing.image %>">
+
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Country</label>
+          <input required   class="form-control" type="text" name="listing[country]" value="<%= listing.country %>" >
+
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">loaction</label>
+          <input required   class="form-control" type="text" name="listing[location]" value="<%= listing.location %>" >
+ 
+        </div>
+     
+
+    <button class="btn btn-dark btnsubmit" type="submit">Edit Now</button>
+      </form>
+    </div>
+  </div>
+  <script src="/javascript/script.js"></script>
+</body>
 
    
 </body>

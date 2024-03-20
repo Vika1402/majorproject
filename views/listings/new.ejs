@@ -3,15 +3,24 @@
   <div class="row">
     <div class="col-8 offset-2">
       <h3>Create a new listings</h3>
-      <form action="/listings" method="post">
+      <form
+        action="/listings"
+        method="post"
+        novalidate
+        class="needs-validation"
+      >
         <div class="mb-3">
           <label for="title" class="form-label">title</label>
           <input
             type="text"
-            placeholder="Add a catchy Title"
             name="listing[title]"
+            placeholder="Enter title "
             class="form-control"
+            required
           />
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
 
         <div class="mb-3">
@@ -20,7 +29,11 @@
             name="listing[description]"
             placeholder="Enter Description"
             class="form-control"
-          ></textarea>
+            required
+          >  </textarea>
+          <div class="invalid-feedback">
+            Please choose a description
+          </div>
         </div>
 
         <div class="row">
@@ -31,7 +44,11 @@
               name="listing[price]"
               placeholder="Enter Price "
               class="form-control"
+              required
             />
+            <div class="invalid-feedback">
+              Please choose a price
+            </div>
           </div>
           <div class="mb-3 col-md-8">
             <label for="country">country</label>
@@ -40,7 +57,11 @@
               placeholder="Enter country"
               name="listing[country]"
               class="form-control"
+              required
             />
+            <div class="invalid-feedback">
+              Please choose a country
+            </div>
           </div>
         </div>
 
@@ -61,12 +82,17 @@
             placeholder="Enter location"
             name="listing[location]"
             class="form-control"
+            required
           />
+          <div class="invalid-feedback">
+            Please choose a location
+          </div>
         </div>
 
         <button type="submit" class="btn btn-dark">Add Now</button>
       </form>
-      <br><br><br><br>
     </div>
+  
   </div>
+
 </body>

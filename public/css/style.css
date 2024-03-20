@@ -48,7 +48,9 @@ color: #222222;
   }
 
 
-  
+  .listing-card{
+border: 1px solid black !important;
+  }
  .card{
   border: none !important;
   margin-bottom: 2rem;
@@ -69,9 +71,7 @@ color: #222222;
  .listing-link{
   text-decoration: none;
  }
- card-effect{
-
- }
+ 
  .card-img-overlay{
   opacity: 0;
  }
@@ -79,3 +79,36 @@ color: #222222;
   opacity: 0.2;
   background-color: rgb(230, 221, 221);
  }
+
+ .card-btn{
+  padding: 5px;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+ }
+
+ .btnsubmit{
+  background-color: red !important;
+  border: none !important;
+ }
+ .show-image{
+  height: 30vh !important;
+width: 50vh !important;
+ } 
+
+ footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+width: 100%;
+ 
+ 
+}
+
+.f-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
